@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: #131313;
+        font-family: sans-serif;
+      }
+
+      h2 {
+        color: #fff;
+        text-align: center;
+      }
+
+      a {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        color: #7f52d4;
+        font-size: 30px;
+        font-family: verdana;
+        letter-spacing: 4px;
+        padding-left: 5px;
+      }
+
+      a::before,
+      a::after,
+      span::before,
+      span::after {
+        content: "";
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background: transparent;
+        transition: 1s;
+        /* -webkit-mix-blend-mode: hue; */
+      }
+
+      a::before {
+        top: -2px;
+        left: -2px;
+        border-top: 2px solid #7f52d4;
+        border-left: 2px solid #7f52d4;
+      }
+      a::after {
+        top: -2px;
+        right: -2px;
+        border-top: 2px solid #7f52d4;
+        border-right: 2px solid #7f52d4;
+      }
+
+      span::before {
+        bottom: -2px;
+        left: -2px;
+        border-bottom: 2px solid #7f52d4;
+        border-left: 2px solid #7f52d4;
+      }
+      span::after {
+        bottom: -2px;
+        right: -2px;
+        border-bottom: 2px solid #7f52d4;
+        border-right: 2px solid #7f52d4;
+      }
+
+      a:hover::before,
+      a:hover::after,
+      a:hover span::before,
+      a:hover span::after {
+        width: calc(180px / 2);
+        height: calc(50px / 2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="middle">
+      <a href="#"><span></span>Click Me</a>
+    </div>
+  </body>
+</html>
